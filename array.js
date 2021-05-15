@@ -44,6 +44,15 @@ console.log(arr.every((e)=>(e%2===0)))
 arr.forEach((element)=> console.log(element));
 
 
-for(i of arr){
-    console.log(i);
+// functional scopic var
+var x=1;
+function a(){
+    console.log(x);
 }
+
+function b(){
+    var x=2;
+    a();
+}
+
+b();
