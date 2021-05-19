@@ -1,11 +1,11 @@
-//import { SuperAgent,get } from 'superagent';
+import { get } from 'axios';
 
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
 const getDogImage = (input) =>{
-    return (fetch(`https://dog.ceo/api/breed/${input}/images/random`))
+    return (get(`https://dog.ceo/api/breed/${input}/images/random`))
 }
 
 
