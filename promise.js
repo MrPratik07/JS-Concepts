@@ -1,3 +1,5 @@
+const { resolve } = require("path");
+
 const a = () => {
     return "I m in a";
 }
@@ -39,4 +41,30 @@ const callme = async() =>{
     console.log(cfun);
 }
 
-callme();
+//callme();
+
+
+
+
+// write a promise to get number 3
+
+function returnNumber3(n){
+    return new Promise((resolve,reject)=>{
+        if(n!=3){
+            reject("Number is not three")
+        }
+        resolve(3);
+    })
+}
+
+function printx(x){
+    console.log("It is",x);
+}
+
+const getNumber= async()=> {
+    const x= await returnNumber3(2); 
+
+    const y=await printx(x);
+}
+
+getNumber();

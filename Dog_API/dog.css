@@ -1,19 +1,20 @@
 
 .main-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    /* display: flex;
+    justify-content: center; */
+
+    margin: 0 auto;
 }
 
-.input-container{
+#input-container{
     margin-right: 5px;
     padding: 10px;
     width: 5cm;
 }
 
-.search-button{
-    border-radius: 10px;
+#search-button{
+    Border-radius: 10px;
     border: none;
     padding: 10px;
-    width: 2cm;
+    Width: 2cm;
 }
