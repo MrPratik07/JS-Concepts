@@ -1,0 +1,10 @@
+console.log(1+"2"+"2");
+console.log(1 +2+"2");
+console.log(1+-"2"+"2")
+console.log(+"1"+"1"+"1");
+
+// && search for 0 and and if 0 is not present then return last value  
+console.log(4 && 2 && 1 && 4 && 0);
+
+// || search for first non zero value
+console.log(0 || 0 || 3 || 4)

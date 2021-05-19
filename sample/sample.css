@@ -17,6 +17,10 @@ body{
     background-color: #0f3057;
 }
 
+.header-container h1{
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .body-container{
     height: 60%;
     display: flex;

@@ -11,4 +11,6 @@ fetch("https://api.chucknorris.io/jokes/random")
     var getData = data.value;
     console.log(getData);
 })
-.catch();
+.catch((err)=>{
+    console.log(err);
+});
