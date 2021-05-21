@@ -1,54 +1,31 @@
 //import superagent from 'superagent';
 
+let input=document.getElementById("input-container");
+let button = document.getElementById("search-button");
+let image=document.querySelector(".img-container");
 
-// var input=document.getElementById("input-container");
-//  var button = document.getElementById("search-button");
-
-// function inputLength() {
-//     return input.value.length
-//   }
+function inputLength(s) {
+    return s.length;
+  }
   
-
-// // function capitalize(string) {
-// //     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-// // }
-
-// // const getDogImage = (input) =>{
-// //     return (superagent(`https://dog.ceo/api/breed/${input}/images/random`))
-// // }
-
-
-// const displayDogClickHandler= () => {
-//     //console.log("Hellow")
-//     if(inputLength()>0){
-//         console.log(input.value);
-//     }
-
-// //const result = getDogImage(input);
-// //console.log(result.body.message);
-
-// }
-
-// displayDogClickHandler();
-
-// //button.addEventListener('click',displayDogClickHandler);
-
-
-
-
-
-
-
-function factorial(n){
-    if(n==0){
-        return 0;
-
+ button.addEventListener('click',()=>{
+   
+    var output=input.value
+    if(inputLength(output) < 0){
+        window.alert("Enter proper input");
     }
-    if(n==1){
-        return 1;
-    }
-
-    return n*factorial(n-1);
-}
-
-console.log(factorial(5));
+    
+    
+    let createImg = document.createElement("img");
+    image.innerHTML="";
+   //fetch(`https://dog.ceo/api/breed/${output}/images/random`)
+   //fetch(`https://dog.ceo/api/breeds/image/random`)
+   fetch(`https://dog.ceo/api/breed/${output}/images`)
+   .then(response => response.json())
+    .then(response=>{
+          createImg.setAttribute('src',`${response.message[0]}`);
+          //console.log(response.message[0]);
+          image.appendChild(createImg);
+     });
+    
+});

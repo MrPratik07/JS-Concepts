@@ -1,9 +1,16 @@
 
 .main-container{
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 
-    margin: 0 auto;
+}
+
+.input-button-container{
+    display: flex;
+    justify-content: center;
 }
 
 #input-container{
@@ -17,4 +24,12 @@
     border: none;
     padding: 10px;
     Width: 2cm;
+}
+
+.img-container{
+    display:flex;
+    width: 25rem;
+    height:25rem;
+    border: 2px solid;
+    margin-top: 40px;
 }

@@ -1,10 +1,11 @@
-let x=10;
+var x=10;
 
 function sayHello(){
-    x=20;
+    var x=20;
     console.log(x);
 }
-
+console.log(x);
+sayHello();
 console.log(x);
 
 // Var is FUNCTION SCOPIC and not BLOCK SCOPIC 
@@ -13,7 +14,7 @@ console.log(x);
 if(true){
    var y=20;
 }
-console.log(y);
+//console.log(y);
 
 
 
